@@ -33,7 +33,7 @@ content = """竹子湖海芋季揭幕 白色情人節浪漫賞花
 108、124，並於「竹子湖派出所」公車站下車轉乘或步行前往竹子湖。"""
 
 # 分行並使用 jieba 斷詞
-sentences = [line.strip() for line in corpus.splitlines() if line.strip()]
+sentences = [line.strip() for line in content.splitlines() if line.strip()]
 tokenized_sentences = [list(jieba.cut(sentence)) for sentence in sentences]
 print("斷詞結果：")
 for tokens in tokenized_sentences:
